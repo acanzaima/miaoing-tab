@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+       "48": "icons/icon48.png"
+    }
+ },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "喵ingTab"
+    }
+  },
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "default_locale": "zh_CN",
+  "name": "__MSG_app_name__",
+  "version": "0.0.1",
+  "description": "__MSG_app_description__",
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+  "offline_enabled": true,
+  "host_permissions": [ "*://*/*" ],
+  "optional_permissions": [ "system.cpu", "system.memory", "bookmarks", "history", "favicon" ],
+  "permissions": [ "activeTab", "storage", "unlimitedStorage" ]
+}
