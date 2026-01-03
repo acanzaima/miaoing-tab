@@ -1,4 +1,5 @@
 import "./fetch.js"
+import "./icon-cache.js"
 
 // Service Worker 生命周期事件
 self.addEventListener('install', (event) => {
