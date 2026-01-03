@@ -27,6 +27,11 @@ async function getCachedIconUrls() {
  */
 async function isIconRequest(url) {
   try {
+    // 不处理本地图标路径（以 /assets/ 开头）
+    if (url.includes('/assets/')) {
+      return false
+    }
+
     // 检查是否在用户缓存的图标 URL 列表中
     const cachedUrls = await getCachedIconUrls()
     if (cachedUrls.has(url)) {
