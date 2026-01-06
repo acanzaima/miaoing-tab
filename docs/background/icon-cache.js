@@ -1,6 +1,7 @@
 // 图标缓存配置
 const ICON_CACHE_NAME = 'miaowing-tab-icon-cache-v1'
 const ICON_CACHE_DURATION = 30 * 24 * 60 * 60 * 1000 // 30天
+const REDIRECT_MAP_KEY = 'icon-redirect-map' // URL 重定向映射表键名
 
 /**
  * 从 chrome.storage.local 读取缓存的图标 URL
@@ -20,6 +21,66 @@ async function getCachedIconUrls() {
     console.error('从 chrome.storage 读取图标 URL 失败:', error)
     return new Set()
   }
+}
+
+/**
+ * 从 chrome.storage.local 读取 URL 重定向映射表
+ */
+async function getRedirectMap() {
+  // 检查是否支持 Chrome 扩展 API
+  if (!chrome || !chrome.storage) {
+    return {}
+  }
+
+  try {
+    const result = await chrome.storage.local.get(REDIRECT_MAP_KEY)
+    return result[REDIRECT_MAP_KEY] || {}
+  } catch (error) {
+    console.error('从 chrome.storage 读取重定向映射表失败:', error)
+    return {}
+  }
+}
+
+/**
+ * 保存 URL 重定向映射
+ */
+async function saveRedirectMapping(originalUrl, finalUrl) {
+  // 如果原始 URL 和最终 URL 相同，不需要保存
+  if (originalUrl === finalUrl) {
+    return
+  }
+
+  // 检查是否支持 Chrome 扩展 API
+  if (!chrome || !chrome.storage) {
+    return
+  }
+
+    try {
+    const redirectMap = await getRedirectMap()
+    redirectMap[originalUrl] = finalUrl
+    await chrome.storage.local.set({
+      [REDIRECT_MAP_KEY]: redirectMap
+    })
+    // console.log('已保存重定向映射:', originalUrl, '->', finalUrl)
+  } catch (error) {
+    console.error('保存重定向映射失败:', error)
+  }
+}
+
+/**
+ * 解析 URL，获取最终的重定向 URL
+ */
+async function resolveRedirectUrl(originalUrl) {
+  const redirectMap = await getRedirectMap()
+
+  // 检查是否有重定向映射
+  if (redirectMap[originalUrl]) {
+    // console.log('使用已缓存的重定向 URL:', originalUrl, '->', redirectMap[originalUrl])
+    return redirectMap[originalUrl]
+  }
+
+  // 没有重定向映射，返回原始 URL
+  return originalUrl
 }
 
 /**
@@ -88,11 +149,11 @@ async function getIconFromCache(request) {
     if (isCacheExpired(cachedResponse)) {
       // 缓存已过期，删除并返回null
       await cache.delete(request)
-      console.log('图标缓存已过期，已删除:', request.url)
+      // console.log('图标缓存已过期，已删除:', request.url)
       return null
     }
 
-    console.log('从缓存加载图标:', request.url)
+    // console.log('从缓存加载图标:', request.url)
     return cachedResponse
   } catch (error) {
     console.error('从缓存获取图标失败:', error)
@@ -101,14 +162,48 @@ async function getIconFromCache(request) {
 }
 
 /**
+ * 检查响应是否为图片类型
+ */
+function isImageResponse(response) {
+  if (!response || !response.headers) {
+    return false
+  }
+
+  const contentType = response.headers.get('Content-Type')
+  if (!contentType) {
+    return false
+  }
+
+  // 检查是否为图片类型（包括常见图片格式）
+  const imageTypes = [
+    'image/png',
+    'image/jpeg',
+    'image/gif',
+    'image/webp',
+    'image/svg+xml',
+    'image/x-icon',
+    'image/vnd.microsoft.icon',
+    'image/ico'
+  ]
+
+  return imageTypes.some(type => contentType.includes(type))
+}
+
+/**
  * 缓存图标
  */
 async function cacheIcon(request, response) {
   try {
+    // 检查响应是否为图片类型
+    if (!isImageResponse(response)) {
+      console.warn('响应不是图片类型，跳过缓存:', request.url, response.headers?.get('Content-Type'))
+      return
+    }
+
     const cache = await caches.open(ICON_CACHE_NAME)
     const responseToCache = response.clone()
     await cache.put(request, responseToCache)
-    console.log('图标已缓存:', request.url)
+    // console.log('图标已缓存:', request.url)
   } catch (error) {
     console.error('缓存图标失败:', error)
   }
@@ -132,7 +227,7 @@ async function cleanExpiredCache() {
     }
 
     if (cleanedCount > 0) {
-      console.log(`清理了 ${cleanedCount} 个过期的图标缓存`)
+      // console.log(`清理了 ${cleanedCount} 个过期的图标缓存`)
     }
   } catch (error) {
     console.error('清理过期缓存失败:', error)
@@ -153,38 +248,75 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request)
       }
 
+      // 解析重定向 URL
+      const originalUrl = event.request.url
+      const redirectUrl = await resolveRedirectUrl(originalUrl)
+      const shouldUseRedirectUrl = redirectUrl !== originalUrl
+
+      // 如果有重定向映射，使用重定向后的 URL 构造新的请求
+      const cacheKey = shouldUseRedirectUrl ? new Request(redirectUrl) : event.request
+
       try {
-        // 尝试从缓存中获取
-        const cachedResponse = await getIconFromCache(event.request)
+        // 尝试从缓存中获取（使用重定向后的 URL 作为缓存键）
+        const cachedResponse = await getIconFromCache(cacheKey)
 
         if (cachedResponse) {
           return cachedResponse
         }
 
         // 缓存中没有，从网络获取
-        console.log('从网络获取图标:', event.request.url)
-        const networkResponse = await fetch(event.request)
+        // console.log('从网络获取图标:', originalUrl, shouldUseRedirectUrl ? `(重定向: ${redirectUrl})` : '')
 
-        // 检查响应是否成功
-        if (!networkResponse || !networkResponse.ok) {
-          throw new Error('网络请求失败')
+        let networkResponse
+        try {
+          networkResponse = await fetch(originalUrl, {
+            // 确保跟随重定向
+            redirect: 'follow'
+          })
+        } catch (fetchError) {
+          // fetch 本身失败（如 DNS 错误、网络断开等）
+          console.error('fetch 请求失败:', originalUrl, fetchError)
+          throw fetchError
         }
 
-        // 缓存成功的响应
-        await cacheIcon(event.request, networkResponse)
+        // 检查响应是否存在
+        if (!networkResponse) {
+          throw new Error('网络响应为空')
+        }
+
+        // 保存重定向映射（如果发生了重定向）
+        if (networkResponse.url && networkResponse.url !== originalUrl) {
+          await saveRedirectMapping(originalUrl, networkResponse.url)
+          // 使用最终 URL 作为缓存键
+          const finalCacheKey = new Request(networkResponse.url)
+          if (networkResponse.status >= 200 && networkResponse.status < 400) {
+            await cacheIcon(finalCacheKey, networkResponse)
+          }
+        } else {
+          // 没有发生重定向，使用原始 URL 作为缓存键
+          if (networkResponse.status >= 200 && networkResponse.status < 400) {
+            await cacheIcon(cacheKey, networkResponse)
+          }
+        }
+
+        // 如果响应状态码不是 2xx，记录警告但仍然尝试使用
+        if (!networkResponse.ok) {
+          console.warn('图标响应状态异常:', originalUrl, networkResponse.status, networkResponse.statusText)
+        }
 
         return networkResponse
       } catch (error) {
-        console.error('获取图标失败:', event.request.url, error)
+        console.error('获取图标失败:', originalUrl, error)
 
         // 网络失败时，尝试从缓存中获取（可能已过期但总比没有好）
-        const cachedResponse = await caches.match(event.request)
+        const cachedResponse = await caches.match(cacheKey)
         if (cachedResponse) {
-          console.log('网络失败，使用过期缓存:', event.request.url)
+          // console.log('网络失败，使用过期缓存:', originalUrl)
           return cachedResponse
         }
 
         // 实在不行，返回一个透明的1x1像素图片
+        console.warn('无法获取图标，返回占位图片:', originalUrl)
         return new Response(
           'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChAI9jU76/gAAAABJRU5ErkJggg==',
           {
