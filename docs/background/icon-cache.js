@@ -2,13 +2,15 @@
 const ICON_CACHE_NAME = 'miaowing-tab-icon-cache-v1'
 const ICON_CACHE_DURATION = 30 * 24 * 60 * 60 * 1000 // 30天
 const REDIRECT_MAP_KEY = 'icon-redirect-map' // URL 重定向映射表键名
+const TRANSPARENT_PNG_BASE64 =
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChAI9jU76/gAAAABJRU5ErkJggg=='
 
 /**
  * 从 chrome.storage.local 读取缓存的图标 URL
  */
 async function getCachedIconUrls() {
   // 检查是否支持 Chrome 扩展 API
-  if (!chrome || !chrome.storage) {
+  if (typeof chrome === 'undefined' || !chrome.storage) {
     console.warn('当前环境不支持 chrome.storage API，跳过图标 URL 缓存')
     return new Set()
   }
@@ -28,7 +30,7 @@ async function getCachedIconUrls() {
  */
 async function getRedirectMap() {
   // 检查是否支持 Chrome 扩展 API
-  if (!chrome || !chrome.storage) {
+  if (typeof chrome === 'undefined' || !chrome.storage) {
     return {}
   }
 
@@ -51,7 +53,7 @@ async function saveRedirectMapping(originalUrl, finalUrl) {
   }
 
   // 检查是否支持 Chrome 扩展 API
-  if (!chrome || !chrome.storage) {
+  if (typeof chrome === 'undefined' || !chrome.storage) {
     return
   }
 
@@ -123,7 +125,7 @@ function isCacheExpired(response) {
   // 检查 Date 头
   const dateHeader = response.headers.get('Date')
   if (!dateHeader) {
-    return true
+    return false
   }
 
   const cachedDate = new Date(dateHeader).getTime()
@@ -317,12 +319,10 @@ self.addEventListener('fetch', (event) => {
 
         // 实在不行，返回一个透明的1x1像素图片
         console.warn('无法获取图标，返回占位图片:', originalUrl)
-        return new Response(
-          'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChAI9jU76/gAAAABJRU5ErkJggg==',
-          {
-            headers: { 'Content-Type': 'image/png' }
-          }
-        )
+        const bytes = Uint8Array.from(atob(TRANSPARENT_PNG_BASE64), (char) => char.charCodeAt(0))
+        return new Response(bytes, {
+          headers: { 'Content-Type': 'image/png' }
+        })
       }
     })()
   )

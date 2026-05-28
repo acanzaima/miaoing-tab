@@ -21,7 +21,7 @@
       } else {
         const needTransCharset = ['charset=gbk', 'charset=GBK']
         const contentType  = response.headers.get('content-type')
-        const needTrans = needTransCharset.some(i => contentType.includes(i))
+        const needTrans = needTransCharset.some(i => contentType?.includes(i))
         if (needTrans) {
           const res = await response.arrayBuffer();
           const decoder = new TextDecoder('gbk');
