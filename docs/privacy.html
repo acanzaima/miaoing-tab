@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>喵ing Tab 隐私协议</title>
+    <style>
+      :root {
+        color: #1f2937;
+        background: #f7f8fb;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+        line-height: 1.75;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #111827;
+        line-height: 1.35;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 32px;
+      }
+
+      h2 {
+        margin: 34px 0 12px;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 17px;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 22px;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .meta {
+        margin-bottom: 28px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .panel {
+        padding: 28px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 18px 50px rgb(15 23 42 / 8%);
+      }
+
+      .note {
+        padding: 14px 16px;
+        margin: 18px 0;
+        color: #374151;
+        background: #f3f6fb;
+        border-left: 4px solid #5b8def;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="panel">
+        <h1>喵ing Tab 隐私协议</h1>
+        <p class="meta">更新日期：2026 年 5 月 28 日</p>
+
+        <p>
+          欢迎使用喵ing Tab。喵ing Tab 是一款用于替换浏览器新标签页的扩展，帮助用户自定义网址导航、壁纸、搜索、小组件和本地数据备份。我们重视您的隐私，并尽量让数据处理保持本地、透明和最小化。
+        </p>
+
+        <div class="note">
+          除非您主动使用需要联网的功能，喵ing Tab 不会将您的新标签页配置、网址导航、便签、待办、搜索历史或上传文件发送到开发者服务器。
+        </div>
+
+        <h2>一、我们如何收集和使用信息</h2>
+        <p>喵ing Tab 可能会在以下场景中处理信息：</p>
+        <ul>
+          <li>
+            <strong>新标签页配置：</strong>包括主题、壁纸、侧边栏分类、网址导航、文件夹、小组件设置、搜索引擎偏好、打开方式等，用于恢复您的个性化新标签页。
+          </li>
+          <li>
+            <strong>本地内容：</strong>包括您上传的壁纸、图标、便签、待办、倒计时和备份文件，仅用于您主动选择的展示、缓存、备份或恢复功能。
+          </li>
+          <li>
+            <strong>搜索相关信息：</strong>当您开启搜索历史时，搜索关键词会保存在本地；当您开启搜索建议时，输入的关键词可能会发送给您选择的搜索引擎，以获取搜索建议。
+          </li>
+          <li>
+            <strong>天气信息：</strong>当您使用天气小组件时，您选择的城市及其经纬度会发送给 Open-Meteo，用于获取天气和地理编码结果。
+          </li>
+          <li>
+            <strong>网址与图标信息：</strong>当您添加网站、在线图标或在线壁纸时，扩展可能请求您输入的网址，以获取网站图标、判断资源类型、加载或缓存用户选择的图片/视频资源。
+          </li>
+          <li>
+            <strong>浏览器收藏夹：</strong>当您主动点击同步收藏夹并授权后，扩展会读取浏览器收藏夹，将网址与标题导入到您的新标签页导航中。
+          </li>
+        </ul>
+
+        <h2>二、信息的存储方式</h2>
+        <p>
+          喵ing Tab 主要使用浏览器提供的本地存储能力保存数据，包括 localStorage、IndexedDB、Cache API 和 chrome.storage.local。数据默认保存在您的设备和浏览器环境中，不会上传至开发者服务器。
+        </p>
+        <p>
+          如果您卸载扩展、清理浏览器数据或手动恢复/覆盖备份，相关本地数据可能被删除或替换。请在执行清理、恢复或卸载操作前自行确认备份。
+        </p>
+
+        <h2>三、我们调用的权限</h2>
+        <ul>
+          <li>
+            <strong>storage / unlimitedStorage：</strong>用于保存新标签页配置、用户上传资源、图标缓存、备份恢复数据和小组件内容。
+          </li>
+          <li>
+            <strong>Host permissions：</strong>用于请求用户选择或输入的搜索建议、网站图标、在线壁纸、在线图标和天气服务。
+          </li>
+          <li>
+            <strong>bookmarks / favicon：</strong>仅在用户主动使用收藏夹同步并授权后，用于读取收藏夹和获取收藏网站图标。
+          </li>
+        </ul>
+
+        <h2>四、第三方服务</h2>
+        <p>在使用部分联网功能时，您的请求可能会发送到第三方服务：</p>
+        <ul>
+          <li>搜索建议：发送给您当前选择的搜索引擎。</li>
+          <li>天气服务：发送给 Open-Meteo，用于获取天气与城市地理编码。</li>
+          <li>网站图标、在线壁纸和在线图标：发送给您输入或选择的目标网站。</li>
+        </ul>
+        <p>
+          这些第三方服务会按照其自身隐私政策处理请求。喵ing Tab 不控制第三方服务的数据处理方式。
+        </p>
+
+        <h2>五、我们不会做什么</h2>
+        <ul>
+          <li>不会出售、出租或交易您的个人信息。</li>
+          <li>不会将您的新标签页配置、便签、待办、搜索历史或收藏夹导入数据上传到开发者服务器。</li>
+          <li>不会在网页中注入广告跟踪代码。</li>
+          <li>不会在未获得浏览器授权的情况下读取您的收藏夹。</li>
+        </ul>
+
+        <h2>六、数据控制与删除</h2>
+        <p>
+          您可以在扩展设置中关闭搜索历史、清理搜索记录、调整或删除网址导航、小组件和本地资源。您也可以通过浏览器的扩展管理、站点数据清理或卸载扩展来删除本地保存的数据。
+        </p>
+
+        <h2>七、未成年人隐私</h2>
+        <p>
+          喵ing Tab 不面向未成年人收集个人信息。若您是未成年人，请在监护人指导下使用本扩展。
+        </p>
+
+        <h2>八、协议更新</h2>
+        <p>
+          我们可能会根据功能变化、法律法规或浏览器商店政策要求更新本隐私协议。更新后的协议会发布在本页面，并以页面顶部的更新日期为准。
+        </p>
+
+        <h2>九、联系我们</h2>
+        <p>
+          如果您对本隐私协议或数据处理方式有疑问，可以通过 GitHub 仓库与我们联系：
+          <a href="https://github.com/acanzaima/miaoing-tab" target="_blank" rel="noopener noreferrer"
+            >https://github.com/acanzaima/miaoing-tab</a
+          >
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

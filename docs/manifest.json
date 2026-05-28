@@ -29,5 +29,5 @@
   "offline_enabled": true,
   "host_permissions": [ "*://*/*" ],
   "optional_permissions": [ "system.cpu", "system.memory", "bookmarks", "history", "favicon" ],
-  "permissions": [ "activeTab", "storage", "unlimitedStorage" ]
+  "permissions": [ "storage", "unlimitedStorage" ]
 }
