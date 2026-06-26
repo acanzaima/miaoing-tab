@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "key": "nature",
+      "label": {
+        "zh-CN": "自然",
+        "en": "Nature"
+      },
+      "wallpapers": [
+        {
+          "id": "nature-forbidden-city",
+          "title": "Forbidden City",
+          "thumb": "images/nature/_thumbs/forbidden-city-02ab77f8.webp",
+          "url": "images/nature/forbidden-city.jpg",
+          "type": "image",
+          "color": "#2f6b4f",
+          "tags": [
+            "nature",
+            "forbidden",
+            "city"
+          ]
+        },
+        {
+          "id": "nature-forest-mist",
+          "title": "Forest Mist",
+          "thumb": "images/nature/_thumbs/forest-mist-5b3013ae.webp",
+          "url": "images/nature/forest-mist.jpg",
+          "type": "image",
+          "color": "#2f6b4f",
+          "tags": [
+            "nature",
+            "forest",
+            "mist"
+          ]
+        },
+        {
+          "id": "nature-spring-flowers",
+          "title": "Spring Flowers",
+          "thumb": "images/nature/_thumbs/spring-flowers-c4c792c3.webp",
+          "url": "images/nature/spring-flowers.jpg",
+          "type": "image",
+          "color": "#2f6b4f",
+          "tags": [
+            "nature",
+            "spring",
+            "flowers"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "animal",
+      "label": {
+        "zh-CN": "动物",
+        "en": "Animal"
+      },
+      "wallpapers": [
+        {
+          "id": "animal-cats",
+          "title": "Cats",
+          "thumb": "images/animal/_thumbs/cats-f7b51055.webp",
+          "url": "images/animal/cats.jpg",
+          "type": "image",
+          "color": "#8b5e34",
+          "tags": [
+            "animal",
+            "cats"
+          ]
+        },
+        {
+          "id": "animal-cool-dog",
+          "title": "Cool Dog",
+          "thumb": "images/animal/_thumbs/cool-dog-88821989.webp",
+          "url": "images/animal/cool-dog.jpg",
+          "type": "image",
+          "color": "#8b5e34",
+          "tags": [
+            "animal",
+            "cool",
+            "dog"
+          ]
+        },
+        {
+          "id": "animal-dogs",
+          "title": "Dogs",
+          "thumb": "images/animal/_thumbs/dogs-af0aaec0.webp",
+          "url": "images/animal/dogs.jpg",
+          "type": "image",
+          "color": "#8b5e34",
+          "tags": [
+            "animal",
+            "dogs"
+          ]
+        },
+        {
+          "id": "animal-parrot",
+          "title": "Parrot",
+          "thumb": "images/animal/_thumbs/parrot-c22a9273.webp",
+          "url": "images/animal/parrot.jpg",
+          "type": "image",
+          "color": "#8b5e34",
+          "tags": [
+            "animal",
+            "parrot"
+          ]
+        },
+        {
+          "id": "animal-squirrel",
+          "title": "Squirrel",
+          "thumb": "images/animal/_thumbs/squirrel-b3af6b35.webp",
+          "url": "images/animal/squirrel.jpg",
+          "type": "image",
+          "color": "#8b5e34",
+          "tags": [
+            "animal",
+            "squirrel"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "city",
+      "label": {
+        "zh-CN": "城市",
+        "en": "City"
+      },
+      "wallpapers": [
+        {
+          "id": "city-beijing",
+          "title": "Beijing",
+          "thumb": "images/city/_thumbs/beijing-4bce4cb7.webp",
+          "url": "images/city/beijing.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "beijing"
+          ]
+        },
+        {
+          "id": "city-chengdu",
+          "title": "Chengdu",
+          "thumb": "images/city/_thumbs/chengdu-7b7b693e.webp",
+          "url": "images/city/chengdu.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "chengdu"
+          ]
+        },
+        {
+          "id": "city-chongqing",
+          "title": "Chongqing",
+          "thumb": "images/city/_thumbs/chongqing-04f20e12.webp",
+          "url": "images/city/chongqing.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "chongqing"
+          ]
+        },
+        {
+          "id": "city-hangzhou",
+          "title": "Hangzhou",
+          "thumb": "images/city/_thumbs/hangzhou-946a7302.webp",
+          "url": "images/city/hangzhou.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "hangzhou"
+          ]
+        },
+        {
+          "id": "city-shanghai",
+          "title": "Shanghai",
+          "thumb": "images/city/_thumbs/shanghai-e2ae7519.webp",
+          "url": "images/city/shanghai.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "shanghai"
+          ]
+        },
+        {
+          "id": "city-shenzhen",
+          "title": "Shenzhen",
+          "thumb": "images/city/_thumbs/shenzhen-023ed483.webp",
+          "url": "images/city/shenzhen.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "shenzhen"
+          ]
+        },
+        {
+          "id": "city-wuhan",
+          "title": "Wuhan",
+          "thumb": "images/city/_thumbs/wuhan-4f8c5283.webp",
+          "url": "images/city/wuhan.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "city",
+            "wuhan"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "space",
+      "label": {
+        "zh-CN": "宇宙",
+        "en": "Space"
+      },
+      "wallpapers": [
+        {
+          "id": "space-earth-from-space",
+          "title": "Earth From Space",
+          "thumb": "images/space/_thumbs/earth-from-space-b7205537.webp",
+          "url": "images/space/earth-from-space.jpg",
+          "type": "image",
+          "color": "#111827",
+          "tags": [
+            "space",
+            "earth",
+            "from"
+          ]
+        },
+        {
+          "id": "space-starry-sky",
+          "title": "Starry Sky",
+          "thumb": "images/space/_thumbs/starry-sky-71c34f15.webp",
+          "url": "images/space/starry-sky.jpg",
+          "type": "image",
+          "color": "#111827",
+          "tags": [
+            "space",
+            "starry",
+            "sky"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "abstract",
+      "label": {
+        "zh-CN": "抽象",
+        "en": "Abstract"
+      },
+      "wallpapers": [
+        {
+          "id": "abstract-desert-dunes",
+          "title": "Desert Dunes",
+          "thumb": "images/abstract/_thumbs/desert-dunes-50d5ee5d.webp",
+          "url": "images/abstract/desert-dunes.jpg",
+          "type": "image",
+          "color": "#4f46e5",
+          "tags": [
+            "abstract",
+            "desert",
+            "dunes"
+          ]
+        },
+        {
+          "id": "abstract-twilight-sky",
+          "title": "Twilight Sky",
+          "thumb": "images/abstract/_thumbs/twilight-sky-bc86c989.webp",
+          "url": "images/abstract/twilight-sky.jpg",
+          "type": "image",
+          "color": "#4f46e5",
+          "tags": [
+            "abstract",
+            "twilight",
+            "sky"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "minimal",
+      "label": {
+        "zh-CN": "极简",
+        "en": "Minimal"
+      },
+      "wallpapers": [
+        {
+          "id": "minimal-autumn-leaves",
+          "title": "Autumn Leaves",
+          "thumb": "images/minimal/_thumbs/autumn-leaves-5f0b92e9.webp",
+          "url": "images/minimal/autumn-leaves.jpg",
+          "type": "image",
+          "color": "#e5e7eb",
+          "tags": [
+            "minimal",
+            "autumn",
+            "leaves"
+          ]
+        },
+        {
+          "id": "minimal-kitten",
+          "title": "Kitten",
+          "thumb": "images/minimal/_thumbs/kitten-5fa15016.webp",
+          "url": "images/minimal/kitten.jpg",
+          "type": "image",
+          "color": "#e5e7eb",
+          "tags": [
+            "minimal",
+            "kitten"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "illustration",
+      "label": {
+        "zh-CN": "插画",
+        "en": "Illustration"
+      },
+      "wallpapers": [
+        {
+          "id": "illustration-calm-coast",
+          "title": "Calm Coast",
+          "thumb": "images/illustration/_thumbs/calm-coast-9341ad26.webp",
+          "url": "images/illustration/calm-coast.jpg",
+          "type": "image",
+          "color": "#f59e0b",
+          "tags": [
+            "illustration",
+            "calm",
+            "coast"
+          ]
+        },
+        {
+          "id": "illustration-coastal-waves",
+          "title": "Coastal Waves",
+          "thumb": "images/illustration/_thumbs/coastal-waves-3a03ec61.webp",
+          "url": "images/illustration/coastal-waves.jpg",
+          "type": "image",
+          "color": "#f59e0b",
+          "tags": [
+            "illustration",
+            "coastal",
+            "waves"
+          ]
+        },
+        {
+          "id": "illustration-waterfront",
+          "title": "Waterfront",
+          "thumb": "images/illustration/_thumbs/waterfront-7d73650a.webp",
+          "url": "images/illustration/waterfront.jpg",
+          "type": "image",
+          "color": "#f59e0b",
+          "tags": [
+            "illustration",
+            "waterfront"
+          ]
+        }
+      ]
+    }
+  ]
+}
