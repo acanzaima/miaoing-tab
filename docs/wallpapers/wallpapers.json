@@ -127,87 +127,42 @@
       },
       "wallpapers": [
         {
-          "id": "city-beijing",
-          "title": "Beijing",
-          "thumb": "images/city/_thumbs/beijing-4bce4cb7.webp",
-          "url": "images/city/beijing.jpg",
+          "id": "city-city-river-dusk",
+          "title": "City River Dusk",
+          "thumb": "images/city/_thumbs/city-river-dusk-04599d4f.webp",
+          "url": "images/city/city-river-dusk.jpg",
           "type": "image",
           "color": "#334155",
           "tags": [
             "city",
-            "beijing"
+            "river",
+            "dusk"
           ]
         },
         {
-          "id": "city-chengdu",
-          "title": "Chengdu",
-          "thumb": "images/city/_thumbs/chengdu-7b7b693e.webp",
-          "url": "images/city/chengdu.jpg",
+          "id": "city-london-skyline",
+          "title": "London Skyline",
+          "thumb": "images/city/_thumbs/london-skyline-9bcdbca2.webp",
+          "url": "images/city/london-skyline.jpg",
           "type": "image",
           "color": "#334155",
           "tags": [
             "city",
-            "chengdu"
+            "london",
+            "skyline"
           ]
         },
         {
-          "id": "city-chongqing",
-          "title": "Chongqing",
-          "thumb": "images/city/_thumbs/chongqing-04f20e12.webp",
-          "url": "images/city/chongqing.jpg",
+          "id": "city-manhattan-sunset",
+          "title": "Manhattan Sunset",
+          "thumb": "images/city/_thumbs/manhattan-sunset-9c9dd595.webp",
+          "url": "images/city/manhattan-sunset.jpg",
           "type": "image",
           "color": "#334155",
           "tags": [
             "city",
-            "chongqing"
-          ]
-        },
-        {
-          "id": "city-hangzhou",
-          "title": "Hangzhou",
-          "thumb": "images/city/_thumbs/hangzhou-946a7302.webp",
-          "url": "images/city/hangzhou.jpg",
-          "type": "image",
-          "color": "#334155",
-          "tags": [
-            "city",
-            "hangzhou"
-          ]
-        },
-        {
-          "id": "city-shanghai",
-          "title": "Shanghai",
-          "thumb": "images/city/_thumbs/shanghai-e2ae7519.webp",
-          "url": "images/city/shanghai.jpg",
-          "type": "image",
-          "color": "#334155",
-          "tags": [
-            "city",
-            "shanghai"
-          ]
-        },
-        {
-          "id": "city-shenzhen",
-          "title": "Shenzhen",
-          "thumb": "images/city/_thumbs/shenzhen-023ed483.webp",
-          "url": "images/city/shenzhen.jpg",
-          "type": "image",
-          "color": "#334155",
-          "tags": [
-            "city",
-            "shenzhen"
-          ]
-        },
-        {
-          "id": "city-wuhan",
-          "title": "Wuhan",
-          "thumb": "images/city/_thumbs/wuhan-4f8c5283.webp",
-          "url": "images/city/wuhan.jpg",
-          "type": "image",
-          "color": "#334155",
-          "tags": [
-            "city",
-            "wuhan"
+            "manhattan",
+            "sunset"
           ]
         }
       ]
@@ -359,6 +314,87 @@
           "tags": [
             "illustration",
             "waterfront"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "architecture",
+      "label": {
+        "zh-CN": "建筑",
+        "en": "Architecture"
+      },
+      "wallpapers": [
+        {
+          "id": "architecture-coastal-house",
+          "title": "Coastal House",
+          "thumb": "images/architecture/_thumbs/coastal-house-fac5fa59.webp",
+          "url": "images/architecture/coastal-house.jpg",
+          "type": "image",
+          "color": "#64748b",
+          "tags": [
+            "architecture",
+            "coastal",
+            "house"
+          ]
+        },
+        {
+          "id": "architecture-sculptural-house",
+          "title": "Sculptural House",
+          "thumb": "images/architecture/_thumbs/sculptural-house-a8784bca.webp",
+          "url": "images/architecture/sculptural-house.jpg",
+          "type": "image",
+          "color": "#64748b",
+          "tags": [
+            "architecture",
+            "sculptural",
+            "house"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "car",
+      "label": {
+        "zh-CN": "汽车",
+        "en": "Car"
+      },
+      "wallpapers": [
+        {
+          "id": "car-extremeforest",
+          "title": "ExtremeForest",
+          "thumb": "images/car/_thumbs/extremeforest-e53d99a5.webp",
+          "url": "images/car/ExtremeForest.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "car",
+            "extremeforest"
+          ]
+        },
+        {
+          "id": "car-u7",
+          "title": "U7",
+          "thumb": "images/car/_thumbs/u7-cc2989c7.webp",
+          "url": "images/car/U7.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "car",
+            "u7"
+          ]
+        },
+        {
+          "id": "car-u9-x",
+          "title": "U9 X",
+          "thumb": "images/car/_thumbs/u9-x-fa0b22b7.webp",
+          "url": "images/car/U9-X.jpg",
+          "type": "image",
+          "color": "#334155",
+          "tags": [
+            "car",
+            "u9",
+            "x"
           ]
         }
       ]
