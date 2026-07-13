@@ -1,7 +1,9 @@
 import './fetch.js'
 import './icon-cache.js'
+import { registerRuntimeEvent } from './extension-api.js'
 
 const RELEASE_NOTES_PENDING_VERSION_KEY = 'miaowing-release-notes-pending-version'
+const STARTER_PRESET_PENDING_KEY = 'miaowing-starter-preset-pending'
 
 // Service Worker 生命周期事件
 self.addEventListener('install', (event) => {
@@ -16,13 +18,24 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(self.clients.claim())
 })
 
-chrome.runtime.onInstalled.addListener((details) => {
+registerRuntimeEvent('onInstalled', ({ runtime, storage }) => (details) => {
+  const currentVersion = runtime.getManifest().version
+
+  if (details.reason === 'install') {
+    storage.local.set({
+      [STARTER_PRESET_PENDING_KEY]: {
+        version: currentVersion,
+        createdAt: Date.now()
+      }
+    })
+    return
+  }
+
   if (details.reason !== 'update') {
     return
   }
 
-  const currentVersion = chrome.runtime.getManifest().version
-  chrome.storage.local.set({
+  storage.local.set({
     [RELEASE_NOTES_PENDING_VERSION_KEY]: {
       version: currentVersion,
       previousVersion: details.previousVersion || ''

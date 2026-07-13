@@ -1,174 +1,280 @@
+import { readResponseBytes } from './network.js'
+import { registerRuntimeEvent } from './extension-api.js'
 
-const readResponseText = async response => {
-  const needTransCharset = ['charset=gbk', 'charset=GBK']
-  const contentType = response.headers.get('content-type') || ''
-  const needTrans = needTransCharset.some(i => contentType.includes(i))
+const SEARCH_SUGGESTION_TIMEOUT_MS = 20 * 1000
+const CONTENT_TYPE_TIMEOUT_MS = 20 * 1000
+const TEXT_RESOURCE_TIMEOUT_MS = 30 * 1000
+const WALLPAPER_BLOB_TIMEOUT_MS = 120 * 1000
 
-  if (needTrans) {
-    const res = await response.arrayBuffer()
-    const decoder = new TextDecoder('gbk')
-    return decoder.decode(res)
+const SEARCH_SUGGESTION_MAX_SIZE = 1 * 1024 * 1024
+const TEXT_RESOURCE_MAX_SIZE = 5 * 1024 * 1024
+const WALLPAPER_BLOB_MAX_SIZE = 50 * 1024 * 1024
+
+const TEXT_CONTENT_TYPES = [
+  'text/',
+  'application/json',
+  'application/ld+json',
+  'application/manifest+json',
+  'application/rss+xml',
+  'application/atom+xml',
+  'application/xml',
+  'application/xhtml+xml',
+  'application/javascript',
+  'application/x-javascript',
+  'image/svg+xml'
+]
+
+const MEDIA_EXTENSIONS = /\.(avif|bmp|gif|jpe?g|m4v|mov|mp4|ogg|png|svg|webm|webp)(?:[?#].*)?$/i
+
+const getRequestUrl = (request) => {
+  const url = request?.payload?.url
+  if (typeof url !== 'string') {
+    throw createRequestError('INVALID_REQUEST_PAYLOAD', 'Request payload url is invalid')
   }
 
-  return response.text()
-}
-
-// fetch函数
-function fetchSearchSuggestions(url, returnResponse) {
-  return new Promise(async(resolve, reject) => {
-    try {
-      // 发起跨域请求
-      const response = await fetch(url, {
-        method: 'GET',
-        referrerPolicy: 'no-referrer', // 设置 Referrer Policy
-      });
-  
-      // 检查响应状态
-      if (!response.ok) {
-        reject(new Error(`HTTP error! status: ${response.status}`));
-        return
-      }
-
-      // 根据returnResponse标志决定是否直接返回Response对象
-      if (returnResponse) {
-        resolve(response)
-      } else {
-        resolve(await readResponseText(response))
-      }
-
-    } catch (error) {
-      console.error('获取搜索建议时出错:', error);
-      reject(error)
-    }
-  })
-
-}
-
-// 监听来自内容脚本的消息
-function fetchNetworkBlob(url) {
-  return fetchSearchSuggestions(url, true).then(async res => {
-    const buffer = await res.arrayBuffer()
-    if (buffer.byteLength > 50 * 1024 * 1024) {
-      throw new Error('Network resource is too large')
-    }
-    return {
-      contentType: res.headers.get('content-type') || 'application/octet-stream',
-      data: Array.from(new Uint8Array(buffer))
-    }
-  })
-}
-
-function fetchTextResource(url) {
-  return fetchSearchSuggestions(url, true).then(async res => {
-    return {
-      contentType: res.headers.get('content-type') || '',
-      data: await readResponseText(res),
-      finalUrl: res.url || url
-    }
-  })
-}
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'FETCH_SEARCH_SUGGESTIONS') {
-    const { url } = request.payload;
-
-    // 使用 Promise 处理异步请求
-    fetchSearchSuggestions(url)
-      .then(suggestions => {
-        sendResponse({ 
-          success: true, 
-          data: suggestions 
-        });
-      })
-      .catch(error => {
-        sendResponse({ 
-          success: false, 
-          error: error 
-        });
-      });
-
-    // 表示将异步发送响应
-    return true;
-  } else if (request.type === 'FETCH_NETWORK_SOURCE_CONTENT_TYPE') {
-    const { url } = request.payload;
-
-    // 使用 Promise 处理异步请求
-    fetchSearchSuggestions(url, true)
-      .then(res => {
-        sendResponse({
-          success: true, 
-          data: res.headers.get('content-type')
-        });
-      })
-      .catch(error => {
-        sendResponse({ 
-          success: false, 
-          error: error 
-        });
-      });
-
-    // 表示将异步发送响应
-    return true;
-  } else if (request.type === 'FETCH_TEXT_RESOURCE') {
-    const { url } = request.payload;
-
-    fetchTextResource(url)
-      .then(res => {
-        sendResponse({
-          success: true,
-          contentType: res.contentType,
-          data: res.data,
-          finalUrl: res.finalUrl
-        });
-      })
-      .catch(error => {
-        sendResponse({
-          success: false,
-          error: error
-        });
-      });
-
-    return true;
-  } else if (request.type === 'FETCH_WALLPAPER_BLOB') {
-    const { url } = request.payload;
-
-    fetchNetworkBlob(url)
-      .then(res => {
-        sendResponse({
-          success: true,
-          contentType: res.contentType,
-          data: res.data
-        });
-      })
-      .catch(error => {
-        sendResponse({
-          success: false,
-          error: error
-        });
-      });
-
-    return true;
-  } else if (request.type === 'FEICH_HOST_FAVICON') {
-    const { url } = request.payload;
-
-    // 使用 Promise 处理异步请求
-    fetchTextResource(url)
-      .then(res => {
-        sendResponse({
-          success: true, 
-          data: res.data,
-          finalUrl: res.finalUrl,
-          contentType: res.contentType
-        });
-      })
-      .catch(error => {
-        sendResponse({ 
-          success: false, 
-          error: error 
-        });
-      });
-
-    // 表示将异步发送响应
-    return true;
+  const parsedUrl = new URL(url)
+  if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') {
+    throw createRequestError('INVALID_URL_PROTOCOL', 'Only http and https urls are supported')
   }
-});
+
+  return parsedUrl.href
+}
+
+const createRequestError = (code, message) => {
+  const error = new Error(message)
+  error.code = code
+  return error
+}
+
+const serializeError = (error) => {
+  return {
+    code: error?.code || error?.name || 'REQUEST_FAILED',
+    message: error?.message || 'Request failed'
+  }
+}
+
+const assertTrustedSender = (sender, runtime) => {
+  if (!runtime?.id || sender?.id === runtime.id) {
+    return
+  }
+
+  const extensionOrigin = runtime.getURL('/')
+  if (typeof sender?.url === 'string' && sender.url.startsWith(extensionOrigin)) {
+    return
+  }
+
+  throw createRequestError('UNTRUSTED_SENDER', 'Runtime message sender is not trusted')
+}
+
+const fetchWithTimeout = async (url, options = {}, timeoutMs = TEXT_RESOURCE_TIMEOUT_MS) => {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+
+  try {
+    return await fetch(url, {
+      ...options,
+      redirect: options.redirect || 'follow',
+      referrerPolicy: options.referrerPolicy || 'no-referrer',
+      signal: controller.signal
+    })
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+const fetchHttpResource = async (url, options = {}, timeoutMs = TEXT_RESOURCE_TIMEOUT_MS) => {
+  const response = await fetchWithTimeout(url, options, timeoutMs)
+  if (!response.ok) {
+    throw createRequestError('HTTP_ERROR', `HTTP error! status: ${response.status}`)
+  }
+
+  return response
+}
+
+const getNormalizedContentType = (response) => {
+  return (response.headers.get('content-type') || '').toLowerCase()
+}
+
+const isTextContentType = (contentType) => {
+  if (!contentType) {
+    return true
+  }
+
+  return TEXT_CONTENT_TYPES.some((type) => contentType.includes(type))
+}
+
+const assertTextResponse = (response) => {
+  const contentType = getNormalizedContentType(response)
+  if (!isTextContentType(contentType)) {
+    throw createRequestError('UNSUPPORTED_CONTENT_TYPE', 'Network resource is not text content')
+  }
+}
+
+const getTextDecoder = (contentType) => {
+  const charset = /charset=([^;]+)/i.exec(contentType)?.[1]?.trim().toLowerCase()
+  const decoderName = ['gbk', 'gb2312', 'gb18030'].includes(charset || '') ? 'gbk' : 'utf-8'
+
+  return new TextDecoder(decoderName)
+}
+
+const readResponseText = async (response, maxSize) => {
+  assertTextResponse(response)
+  const bytes = await readResponseBytes(response, maxSize)
+  return getTextDecoder(getNormalizedContentType(response)).decode(bytes)
+}
+
+const isMediaContentType = (contentType) => {
+  return contentType.startsWith('image/') || contentType.startsWith('video/')
+}
+
+const isGenericBinaryContentType = (contentType) => {
+  return !contentType || contentType.includes('application/octet-stream')
+}
+
+const assertMediaResponse = (response, url) => {
+  const contentType = getNormalizedContentType(response)
+  if (isMediaContentType(contentType)) {
+    return
+  }
+
+  if (isGenericBinaryContentType(contentType) && MEDIA_EXTENSIONS.test(url)) {
+    return
+  }
+
+  throw createRequestError('UNSUPPORTED_CONTENT_TYPE', 'Network resource is not image or video')
+}
+
+const fetchSearchSuggestions = async (url) => {
+  const response = await fetchHttpResource(
+    url,
+    {
+      method: 'GET'
+    },
+    SEARCH_SUGGESTION_TIMEOUT_MS
+  )
+  return readResponseText(response, SEARCH_SUGGESTION_MAX_SIZE)
+}
+
+const fetchNetworkContentType = async (url) => {
+  try {
+    const response = await fetchHttpResource(
+      url,
+      {
+        method: 'HEAD'
+      },
+      CONTENT_TYPE_TIMEOUT_MS
+    )
+    return response.headers.get('content-type') || ''
+  } catch {
+    const response = await fetchHttpResource(
+      url,
+      {
+        method: 'GET'
+      },
+      CONTENT_TYPE_TIMEOUT_MS
+    )
+    return response.headers.get('content-type') || ''
+  }
+}
+
+const fetchTextResource = async (url) => {
+  const response = await fetchHttpResource(
+    url,
+    {
+      method: 'GET'
+    },
+    TEXT_RESOURCE_TIMEOUT_MS
+  )
+
+  return {
+    contentType: response.headers.get('content-type') || '',
+    data: await readResponseText(response, TEXT_RESOURCE_MAX_SIZE),
+    finalUrl: response.url || url
+  }
+}
+
+const fetchNetworkBlob = async (url) => {
+  const response = await fetchHttpResource(
+    url,
+    {
+      method: 'GET'
+    },
+    WALLPAPER_BLOB_TIMEOUT_MS
+  )
+  assertMediaResponse(response, url)
+  const bytes = await readResponseBytes(response, WALLPAPER_BLOB_MAX_SIZE)
+
+  return {
+    contentType: response.headers.get('content-type') || 'application/octet-stream',
+    data: Array.from(bytes)
+  }
+}
+
+const handleRuntimeRequest = async (request, sender, runtime) => {
+  assertTrustedSender(sender, runtime)
+
+  if (!request || typeof request !== 'object' || typeof request.type !== 'string') {
+    throw createRequestError('INVALID_REQUEST', 'Runtime request is invalid')
+  }
+
+  const url = getRequestUrl(request)
+
+  switch (request.type) {
+    case 'FETCH_SEARCH_SUGGESTIONS':
+      return {
+        success: true,
+        data: await fetchSearchSuggestions(url)
+      }
+
+    case 'FETCH_NETWORK_SOURCE_CONTENT_TYPE':
+      return {
+        success: true,
+        data: await fetchNetworkContentType(url)
+      }
+
+    case 'FETCH_TEXT_RESOURCE': {
+      const resource = await fetchTextResource(url)
+      return {
+        success: true,
+        contentType: resource.contentType,
+        data: resource.data,
+        finalUrl: resource.finalUrl
+      }
+    }
+
+    case 'FETCH_WALLPAPER_BLOB': {
+      const resource = await fetchNetworkBlob(url)
+      return {
+        success: true,
+        contentType: resource.contentType,
+        data: resource.data
+      }
+    }
+
+    case 'FEICH_HOST_FAVICON': {
+      const resource = await fetchTextResource(url)
+      return {
+        success: true,
+        data: resource.data,
+        finalUrl: resource.finalUrl,
+        contentType: resource.contentType
+      }
+    }
+
+    default:
+      throw createRequestError('UNKNOWN_REQUEST_TYPE', 'Runtime request type is unknown')
+  }
+}
+
+registerRuntimeEvent('onMessage', ({ runtime }) => (request, sender, sendResponse) => {
+  handleRuntimeRequest(request, sender, runtime)
+    .then(sendResponse)
+    .catch((error) => {
+      sendResponse({
+        success: false,
+        error: serializeError(error)
+      })
+    })
+
+  return true
+})
