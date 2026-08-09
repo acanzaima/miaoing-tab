@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiaowingTab Privacy Policy</title>
+    <style>
+      :root {
+        color: #1f2937;
+        background: #f7f8fb;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+        line-height: 1.75;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #111827;
+        line-height: 1.35;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 32px;
+      }
+
+      h2 {
+        margin: 34px 0 12px;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 17px;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 22px;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .meta {
+        margin-bottom: 28px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .panel {
+        padding: 28px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 18px 50px rgb(15 23 42 / 8%);
+      }
+
+      .note {
+        padding: 14px 16px;
+        margin: 18px 0;
+        color: #374151;
+        background: #f3f6fb;
+        border-left: 4px solid #5b8def;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="panel">
+        <h1>MiaowingTab Privacy Policy</h1>
+        <p class="meta">Last updated: August 9, 2026</p>
+
+        <p>
+          Welcome to MiaowingTab. MiaowingTab is a browser extension that replaces the new tab
+          page and helps users customize website shortcuts, wallpapers, search, widgets, and
+          local data backups. We value your privacy and strive to keep data processing local,
+          transparent, and limited to what is necessary.
+        </p>
+
+        <div class="note">
+          You remain in control of your data. Persistent data—including new tab settings,
+          website shortcuts, notes, to-do items, search history, and uploaded files—stays in
+          your browser or is saved to a local location you choose when you create a backup. When
+          you use online features, MiaowingTab sends only the minimum information required to
+          provide the current feature to the third-party public services or static resource URLs
+          listed below, such as the current search query, a URL you entered, a city query, or
+          geographic coordinates. Local data unrelated to the current feature is not sent.
+        </div>
+
+        <h2>1. How We Collect and Use Information</h2>
+        <p>MiaowingTab may process information in the following situations:</p>
+        <ul>
+          <li>
+            <strong>New tab settings:</strong> This includes themes, wallpapers, sidebar
+            categories, website shortcuts, folders, scenes and scheduled switching plans, widget
+            settings, search engine preferences, link-opening behavior, and similar settings used
+            to restore your personalized new tab page.
+          </li>
+          <li>
+            <strong>Local content:</strong> This includes wallpapers and icons you upload, notes,
+            to-do items, countdowns, and backup files. This content is used only for display,
+            caching, backup, or restore features that you choose to use.
+          </li>
+          <li>
+            <strong>System password and device verification:</strong> System password creation and
+            verification are performed locally. The extension persistently stores a one-way
+            password verifier with a random salt, not the plaintext password. When a system
+            password is created, the extension uses the browser to download a local TXT recovery
+            file containing the plaintext password. You control that file, and it is not retained
+            as application storage. Only after you actively enable device verification does the
+            extension invoke a WebAuthn platform authenticator and locally store the credential
+            identifier, public key, algorithm, transports, password-binding digest, and creation
+            time. The private key remains with the operating system, authenticator, or password
+            manager. The extension does not read or store biometric data such as fingerprints or
+            facial scans.
+          </li>
+          <li>
+            <strong>Recently visited records:</strong> When you open a website shortcut from the
+            new tab page, the extension locally records the corresponding URL, title, icon, click
+            count, and most recent visit time. This information is used only by the Recent Sites
+            widget and is not uploaded.
+          </li>
+          <li>
+            <strong>Search-related information:</strong> When you perform a search, the current
+            query is sent to the search engine you selected. If search history is enabled, search
+            queries are stored locally. If search suggestions are enabled, the query being typed
+            is also sent to that search engine's suggestion service to retrieve suggestions.
+          </li>
+          <li>
+            <strong>Weather information:</strong> When you enter a city in the Weather widget, the
+            city query is sent to Open-Meteo to retrieve matching cities and geocoding results.
+            After you select a location, its latitude and longitude are sent to Open-Meteo to
+            retrieve weather information. If you actively choose to use your current location,
+            the browser's location result may also be sent to a geocoding service to identify
+            your region.
+          </li>
+          <li>
+            <strong>Trending topics:</strong> When you use the Trending Topics widget, the
+            extension requests the applicable trending-list API to retrieve the latest list.
+          </li>
+          <li>
+            <strong>Daily poetry:</strong> When daily recommended poetry is enabled in clean mode,
+            the extension requests public content services such as Jinrishici to retrieve the
+            content shown that day. Poetry or short-quote lists that you maintain yourself are
+            stored locally only.
+          </li>
+          <li>
+            <strong>Website and icon information:</strong> When you add a website, online icon, or
+            online wallpaper, the extension may request the URL you entered to retrieve a website
+            icon, determine the resource type, or load and cache an image or video you selected.
+          </li>
+          <li>
+            <strong>Browser bookmarks:</strong> After you actively select bookmark sync and grant
+            permission, the extension reads your browser bookmarks and imports their URLs and
+            titles into your new tab shortcuts.
+          </li>
+          <li>
+            <strong>Announcements and recommended resources:</strong> When the extension starts,
+            it may check announcements published by the developer. When you open the Wallpaper
+            Center, the extension may retrieve a list of recommended wallpapers and the related
+            resources. These requests do not include your new tab settings, notes, to-do items,
+            search history, bookmarks, or uploaded files.
+          </li>
+        </ul>
+
+        <h2>2. How Information Is Stored</h2>
+        <p>
+          MiaowingTab primarily stores data using browser-provided local storage capabilities,
+          including localStorage, IndexedDB, the Cache API, and browser extension local storage.
+          By default, the persistent data described above remains on your device and in your
+          browser environment. It is not uploaded to the developer's servers or a third-party
+          cloud service as account or synchronization data, except for the minimum information
+          required when you use online features.
+        </p>
+        <p>
+          If you uninstall the extension, clear browser data, or manually restore or overwrite a
+          backup, the relevant local data may be deleted or replaced. Please make sure you have
+          an appropriate backup before clearing data, restoring a backup, or uninstalling the
+          extension.
+        </p>
+        <p>
+          Full backups and automatic undo records may contain the salted system-password verifier
+          and protected-action settings so the corresponding local protection state can be
+          restored. They do not contain the plaintext system password or the local WebAuthn device
+          credential. Re-downloadable online icon caches are excluded from full backups, while
+          local wallpapers and local icons that are still in use may be included in a backup you
+          actively create. This local data remains in the current browser environment until you
+          delete, clear, or overwrite it, or uninstall the extension.
+        </p>
+
+        <h2>3. Permissions We Use</h2>
+        <ul>
+          <li>
+            <strong>storage / unlimitedStorage:</strong> Used to save new tab settings,
+            user-uploaded resources, cached icons, backup and restore data, and widget content.
+          </li>
+          <li>
+            <strong>Host access:</strong> Used to request search suggestions, website icons,
+            online wallpapers, online icons, weather data, trending topics, daily poetry,
+            announcements, and recommended resources.
+          </li>
+          <li>
+            <strong>Browser location:</strong> Used only when you actively select “Use Current
+            Location” in the Weather widget. Location permission is displayed and managed by your
+            browser.
+          </li>
+          <li>
+            <strong>Bookmarks:</strong> Used only after you actively enable bookmark sync and grant
+            permission, so the extension can read bookmarks and import their URLs and titles into
+            the new tab page.
+          </li>
+          <li>
+            <strong>Website icons:</strong> Used to retrieve the corresponding website icon when
+            you add a URL or sync bookmarks. If this capability is unavailable or permission has
+            not been granted, the extension uses another icon source or a text-based icon.
+          </li>
+          <li>
+            <strong>WebAuthn platform verification:</strong> Invoked only when you actively enable
+            or use device verification. The browser, operating system, or password manager displays
+            the verification interface and manages the private key. When device verification is
+            reset or disabled, the extension may ask the platform to mark the old credential as no
+            longer in use.
+          </li>
+        </ul>
+
+        <h2>4. Third-Party Services</h2>
+        <p>When you use certain online features, your requests may be sent to third-party services:</p>
+        <ul>
+          <li>Search suggestions: sent to your currently selected search engine.</li>
+          <li>
+            Weather services: sent to Open-Meteo to retrieve weather and city geocoding data.
+            Current-location identification may be sent to geocoding services such as
+            BigDataCloud.
+          </li>
+          <li>
+            Trending topics: sent to trending-data APIs such as 60s API to retrieve content from
+            the source you selected.
+          </li>
+          <li>
+            Daily poetry: sent to public content services such as Jinrishici to retrieve daily
+            poetry recommendations.
+          </li>
+          <li>
+            Website icons, online wallpapers, and online icons: sent to the target website that
+            you entered or selected.
+          </li>
+          <li>
+            Announcements and recommended resources: retrieved through content delivery services
+            such as jsDelivr and the GitHub CDN for developer-maintained announcements, wallpaper
+            lists, and related resources.
+          </li>
+        </ul>
+        <p>
+          When you access these third-party services, they may process standard network
+          information—such as your IP address, User-Agent, and request time—under their own privacy
+          policies. Other than a search query, URL, city query, or geographic coordinates required
+          for the current feature, MiaowingTab does not intentionally attach unrelated new tab
+          settings, notes, to-do items, search history, bookmarks, or uploaded files to these
+          requests. MiaowingTab does not control how third-party services process data.
+        </p>
+
+        <h2>5. What We Do Not Do</h2>
+        <ul>
+          <li>We do not sell, rent, or trade your personal information.</li>
+          <li>
+            We do not upload your complete new tab settings, notes, to-do items, search history
+            list, or imported bookmark data to the cloud or another third-party service as account
+            or synchronization data.
+          </li>
+          <li>We do not inject advertising tracking code into web pages.</li>
+          <li>We do not read your bookmarks without browser permission.</li>
+          <li>
+            We do not use data obtained through browser permissions for personalized advertising,
+            resale, or purposes unrelated to features that you actively use.
+          </li>
+        </ul>
+        <p>
+          MiaowingTab's use of data obtained through browser permission APIs complies with the
+          Chrome Web Store User Data Policy, including its Limited Use requirements. Such data is
+          used only to provide or improve features that you actively use and is not made available
+          for human review unless you give explicit consent for specific data, it is necessary for
+          security purposes, or it is required by law.
+        </p>
+
+        <h2>6. Data Control and Deletion</h2>
+        <p>
+          In the extension settings, you can disable search history, clear search records, and
+          modify or delete website shortcuts, widgets, and local resources. You can also delete
+          locally stored data through your browser's extension management or site-data controls,
+          or by uninstalling the extension.
+        </p>
+        <p>
+          You can also change or remove the system password and reset or disable device
+          verification. Disabling device verification stops the extension from using the locally
+          stored credential. Whether an old passkey remains visible in the browser, operating
+          system, or password manager is controlled by that platform.
+        </p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>
+          MiaowingTab is not intended to collect personal information from minors. If you are a
+          minor, please use this extension under the guidance of a parent or legal guardian.
+        </p>
+
+        <h2>8. Updates to This Policy</h2>
+        <p>
+          We may update this Privacy Policy in response to changes in features, laws and
+          regulations, or browser store policies. The updated policy will be published on this
+          page, and the date shown at the top of the page will indicate the latest update.
+        </p>
+
+        <h2>9. Contact Us</h2>
+        <p>
+          If you have questions about this Privacy Policy or how data is processed, you can contact
+          us through the GitHub repository:
+          <a href="https://github.com/acanzaima/miaoing-tab" target="_blank" rel="noopener noreferrer"
+            >https://github.com/acanzaima/miaoing-tab</a
+          >
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

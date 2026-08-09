@@ -1,0 +1,1021 @@
+{
+  "_FileSaver.min-CpLL4Wkd.js": {
+    "file": "assets/FileSaver.min-CpLL4Wkd.js",
+    "name": "FileSaver.min",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_dict-CtmwdbaR.js": {
+    "file": "assets/dict-CtmwdbaR.js",
+    "name": "dict",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_index-B6vyzLch.js": {
+    "file": "assets/index-B6vyzLch.js",
+    "name": "index",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/index-DAYXbX1E.css"
+    ]
+  },
+  "_index-BK3HUzRv.css": {
+    "file": "assets/index-BK3HUzRv.css",
+    "src": "_index-BK3HUzRv.css"
+  },
+  "_index-CwXWvHv7.js": {
+    "file": "assets/index-CwXWvHv7.js",
+    "name": "index",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/index-BK3HUzRv.css"
+    ]
+  },
+  "_index-DAYXbX1E.css": {
+    "file": "assets/index-DAYXbX1E.css",
+    "src": "_index-DAYXbX1E.css"
+  },
+  "_index-FThoPLHW.js": {
+    "file": "assets/index-FThoPLHW.js",
+    "name": "index",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/index-yaaBykdV.css"
+    ]
+  },
+  "_index-yaaBykdV.css": {
+    "file": "assets/index-yaaBykdV.css",
+    "src": "_index-yaaBykdV.css"
+  },
+  "_plugin-B30rXoNt.js": {
+    "file": "assets/plugin-B30rXoNt.js",
+    "name": "plugin",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/plugin-Dil-nbWD.css"
+    ]
+  },
+  "_plugin-Dil-nbWD.css": {
+    "file": "assets/plugin-Dil-nbWD.css",
+    "src": "_plugin-Dil-nbWD.css"
+  },
+  "_useBookmarkSyncPreview-CPoSINmX.js": {
+    "file": "assets/useBookmarkSyncPreview-CPoSINmX.js",
+    "name": "useBookmarkSyncPreview",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/index-mmOhSwIf.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/locales/en.ts",
+      "src/locales/zh-CN.ts",
+      "_FileSaver.min-CpLL4Wkd.js",
+      "src/components/Setting/src/MiSettingModal.vue",
+      "src/components/ReleaseNotes/src/MiReleaseNotesModal.vue",
+      "src/components/Announcement/src/MiAnnouncementCenter.vue",
+      "src/components/Operate/src/MiOperateModal.vue",
+      "src/components/Contextmenu/src/MiContextMenu.vue",
+      "src/components/CommandPalette/src/MiCommandPalette.vue"
+    ],
+    "css": [
+      "assets/index-BCF3jkZK.css"
+    ],
+    "assets": [
+      "assets/add-UvXG_Kos.svg",
+      "assets/code-DTQYMdjd.svg",
+      "assets/game-D7vIhxvL.svg",
+      "assets/home-Dr4ogHek.svg",
+      "assets/movie-uc6Uf-tP.svg",
+      "assets/music-CgkH1IZg.svg",
+      "assets/photography-CXf9vDRg.svg",
+      "assets/science-DyehbcPP.svg",
+      "assets/shopping-Dunkre9A.svg",
+      "assets/social_contact-CwCvp_EK.svg",
+      "assets/unknown-DTI8LQZ4.svg",
+      "assets/custom_icon-DLAjXUhW.svg",
+      "assets/angry-face-with-horns-jzx3Hcbn.svg",
+      "assets/angry-face-8HTKNRvn.svg",
+      "assets/anguished-face-zFCyTChR.svg",
+      "assets/anxious-face-with-sweat-BXe8YPsJ.svg",
+      "assets/astonished-face-Dmplr8jT.svg",
+      "assets/beaming-face-with-smiling-eyes-CtGvGArJ.svg",
+      "assets/clown-face-C249Sk6X.svg",
+      "assets/cold-face-BpOW5lY_.svg",
+      "assets/confounded-face-B7JU_AF8.svg",
+      "assets/confused-face-BN4BJE7-.svg",
+      "assets/cowboy-hat-face-DZRyFC2J.svg",
+      "assets/crying-face-BEBVqVZ5.svg",
+      "assets/disappointed-face-BBGxsWat.svg",
+      "assets/disguised-face-BZETBWSE.svg",
+      "assets/dotted-line-face-COjWQA1a.svg",
+      "assets/downcast-face-with-sweat-sVN-4HDa.svg",
+      "assets/drooling-face-CqlK8V2d.svg",
+      "assets/expressionless-face-Ci2MB1Fo.svg",
+      "assets/face-blowing-a-kiss-BGHaLfEW.svg",
+      "assets/face-exhaling-ABPq7Gxh.svg",
+      "assets/face-holding-back-tears-Cm9xil6L.svg",
+      "assets/face-in-clouds-BvEidw2r.svg",
+      "assets/face-savoring-food-BrWoI3hh.svg",
+      "assets/face-screaming-in-fear-C4LlE4hy.svg",
+      "assets/face-vomiting-CGcxVV9v.svg",
+      "assets/face-with-diagonal-mouth-Bdiosu0k.svg",
+      "assets/face-with-hand-over-mouth-BQMOHP0D.svg",
+      "assets/face-with-head-bandage-NG76PRIL.svg",
+      "assets/face-with-medical-mask-BPyfJU2v.svg",
+      "assets/face-with-monocle-B73IQAYH.svg",
+      "assets/face-with-open-eyes-and-hand-over-mouth-C9mOhNO3.svg",
+      "assets/face-with-open-mouth-BAd-2QT2.svg",
+      "assets/face-with-peeking-eye-Cp5Bw3Vs.svg",
+      "assets/face-with-raised-eyebrow-DLb_2Zrg.svg",
+      "assets/face-with-rolling-eyes-k28Pz7rW.svg",
+      "assets/face-with-spiral-eyes--NmRssCq.svg",
+      "assets/face-with-steam-from-nose-kDoZVONV.svg",
+      "assets/face-with-symbols-on-mouth-BpfQHw08.svg",
+      "assets/face-with-tears-of-joy-C_n7wF5H.svg",
+      "assets/face-with-thermometer-BGtFCdR3.svg",
+      "assets/face-with-tongue-DkI7eVN_.svg",
+      "assets/face-without-mouth-BF3hmwKU.svg",
+      "assets/fearful-face-BCnXIEWp.svg",
+      "assets/flushed-face-QJN5f8ef.svg",
+      "assets/frowning-face-with-open-mouth-B2uRPqiZ.svg",
+      "assets/frowning-face-BqxnBdvV.svg",
+      "assets/grimacing-face-Cp6IE8n5.svg",
+      "assets/grinning-face-with-big-eyes-mtbLTpUE.svg",
+      "assets/grinning-face-with-smiling-eyes-DXt6BTaa.svg",
+      "assets/grinning-face-with-sweat-BlFUhXyY.svg",
+      "assets/grinning-face-D0i96wUK.svg",
+      "assets/grinning-squinting-face-DqeR-tiA.svg",
+      "assets/hot-face-DHrVbS85.svg",
+      "assets/hugging-face-DN4FWMAL.svg",
+      "assets/hushed-face-DPEoTNDM.svg",
+      "assets/kissing-face-with-closed-eyes-Y7JCoVKg.svg",
+      "assets/kissing-face-with-smiling-eyes-lwuloJfk.svg",
+      "assets/kissing-face-Cw_1pdNj.svg",
+      "assets/knocked-out-face-BhvdScdE.svg",
+      "assets/loudly-crying-face-Q3cQhND7.svg",
+      "assets/lying-face-CvWzf7PT.svg",
+      "assets/melting-face-DF9xIa3Z.svg",
+      "assets/money-mouth-face-a0vZWMFL.svg",
+      "assets/nauseated-face-BtZJBpNg.svg",
+      "assets/nerd-face-BxrmfiF2.svg",
+      "assets/neutral-face-BdzQJ-cN.svg",
+      "assets/partying-face-lXQAMA1O.svg",
+      "assets/pensive-face-RqkM2dJQ.svg",
+      "assets/persevering-face-DMQ5-gn3.svg",
+      "assets/pleading-face-Di9fArG6.svg",
+      "assets/pouting-face-CqOml1hI.svg",
+      "assets/relieved-face-3QVJJFcR.svg",
+      "assets/rolling-on-the-floor-laughing-CfRbt5vv.svg",
+      "assets/sad-but-relieved-face-CxpdNnVB.svg",
+      "assets/saluting-face-CALtJUhh.svg",
+      "assets/shaking-face-BR3JRr0G.svg",
+      "assets/shushing-face-DvdjVHui.svg",
+      "assets/sleeping-face-BiWNVC_P.svg",
+      "assets/sleepy-face-D6i3wHV8.svg",
+      "assets/slightly-frowning-face-CQCv-ljf.svg",
+      "assets/slightly-smiling-face-CCZqKajP.svg",
+      "assets/smiling-face-with-halo-BS0gq3dh.svg",
+      "assets/smiling-face-with-heart-eyes-1hR40yoE.svg",
+      "assets/smiling-face-with-hearts-Da-NyB_m.svg",
+      "assets/smiling-face-with-horns-8Zpz9gxn.svg",
+      "assets/smiling-face-with-smiling-eyes-B3SwIxrM.svg",
+      "assets/smiling-face-with-sunglasses-DmoHcxlp.svg",
+      "assets/smiling-face-with-tear-BbwAn_VW.svg",
+      "assets/smiling-face-CHaMCAxV.svg",
+      "assets/smirking-face-CZnoxa1f.svg",
+      "assets/sneezing-face-C7Rfm0ce.svg",
+      "assets/squinting-face-with-tongue-XNReph9r.svg",
+      "assets/star-struck-BI-WGEKD.svg",
+      "assets/thinking-face-D-L_hubM.svg",
+      "assets/tired-face-D2grY_Se.svg",
+      "assets/unamused-face-B5j1h3yN.svg",
+      "assets/upside-down-face-CZHOkrDs.svg",
+      "assets/weary-face-DthxxK_Z.svg",
+      "assets/winking-face-with-tongue-DoUqDrEZ.svg",
+      "assets/winking-face-j01aqQt_.svg",
+      "assets/woozy-face-CMAAhyFP.svg",
+      "assets/worried-face-EAbR7jQb.svg",
+      "assets/yawning-face-D-i4hyXp.svg",
+      "assets/zany-face-INkGXexH.svg",
+      "assets/zipper-mouth-face-0UkkkbPF.svg",
+      "assets/link-6-3KL6HC.svg",
+      "assets/logo-H1BuKNY2.svg",
+      "assets/miao-CaIr4D2z.svg",
+      "assets/mode_desktop-B3IBbsT1.svg",
+      "assets/mode_pure-B-D8aqpa.svg",
+      "assets/navigation-f8YDX9cP.svg",
+      "assets/setting-C3lG2qmJ.svg",
+      "assets/theme_dark-MC-ANf0e.svg",
+      "assets/theme_light-DLyEgBzi.svg",
+      "assets/widget-1358ypUw.svg",
+      "assets/baidu-CUbKyqCl.ico",
+      "assets/google-B89G92vX.ico",
+      "assets/bing-Blhqp4U5.ico",
+      "assets/sogou-Cei-XjXv.ico"
+    ]
+  },
+  "src/assets/engine/baidu.ico": {
+    "file": "assets/baidu-CUbKyqCl.ico",
+    "src": "src/assets/engine/baidu.ico"
+  },
+  "src/assets/engine/bing.ico": {
+    "file": "assets/bing-Blhqp4U5.ico",
+    "src": "src/assets/engine/bing.ico"
+  },
+  "src/assets/engine/google.ico": {
+    "file": "assets/google-B89G92vX.ico",
+    "src": "src/assets/engine/google.ico"
+  },
+  "src/assets/engine/sogou.ico": {
+    "file": "assets/sogou-Cei-XjXv.ico",
+    "src": "src/assets/engine/sogou.ico"
+  },
+  "src/assets/svgs/add.svg": {
+    "file": "assets/add-UvXG_Kos.svg",
+    "src": "src/assets/svgs/add.svg"
+  },
+  "src/assets/svgs/classify/code.svg": {
+    "file": "assets/code-DTQYMdjd.svg",
+    "src": "src/assets/svgs/classify/code.svg"
+  },
+  "src/assets/svgs/classify/game.svg": {
+    "file": "assets/game-D7vIhxvL.svg",
+    "src": "src/assets/svgs/classify/game.svg"
+  },
+  "src/assets/svgs/classify/home.svg": {
+    "file": "assets/home-Dr4ogHek.svg",
+    "src": "src/assets/svgs/classify/home.svg"
+  },
+  "src/assets/svgs/classify/movie.svg": {
+    "file": "assets/movie-uc6Uf-tP.svg",
+    "src": "src/assets/svgs/classify/movie.svg"
+  },
+  "src/assets/svgs/classify/music.svg": {
+    "file": "assets/music-CgkH1IZg.svg",
+    "src": "src/assets/svgs/classify/music.svg"
+  },
+  "src/assets/svgs/classify/photography.svg": {
+    "file": "assets/photography-CXf9vDRg.svg",
+    "src": "src/assets/svgs/classify/photography.svg"
+  },
+  "src/assets/svgs/classify/science.svg": {
+    "file": "assets/science-DyehbcPP.svg",
+    "src": "src/assets/svgs/classify/science.svg"
+  },
+  "src/assets/svgs/classify/shopping.svg": {
+    "file": "assets/shopping-Dunkre9A.svg",
+    "src": "src/assets/svgs/classify/shopping.svg"
+  },
+  "src/assets/svgs/classify/social_contact.svg": {
+    "file": "assets/social_contact-CwCvp_EK.svg",
+    "src": "src/assets/svgs/classify/social_contact.svg"
+  },
+  "src/assets/svgs/classify/unknown.svg": {
+    "file": "assets/unknown-DTI8LQZ4.svg",
+    "src": "src/assets/svgs/classify/unknown.svg"
+  },
+  "src/assets/svgs/custom_icon.svg": {
+    "file": "assets/custom_icon-DLAjXUhW.svg",
+    "src": "src/assets/svgs/custom_icon.svg"
+  },
+  "src/assets/svgs/fluent-emoji/angry-face-with-horns.svg": {
+    "file": "assets/angry-face-with-horns-jzx3Hcbn.svg",
+    "src": "src/assets/svgs/fluent-emoji/angry-face-with-horns.svg"
+  },
+  "src/assets/svgs/fluent-emoji/angry-face.svg": {
+    "file": "assets/angry-face-8HTKNRvn.svg",
+    "src": "src/assets/svgs/fluent-emoji/angry-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/anguished-face.svg": {
+    "file": "assets/anguished-face-zFCyTChR.svg",
+    "src": "src/assets/svgs/fluent-emoji/anguished-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/anxious-face-with-sweat.svg": {
+    "file": "assets/anxious-face-with-sweat-BXe8YPsJ.svg",
+    "src": "src/assets/svgs/fluent-emoji/anxious-face-with-sweat.svg"
+  },
+  "src/assets/svgs/fluent-emoji/astonished-face.svg": {
+    "file": "assets/astonished-face-Dmplr8jT.svg",
+    "src": "src/assets/svgs/fluent-emoji/astonished-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/beaming-face-with-smiling-eyes.svg": {
+    "file": "assets/beaming-face-with-smiling-eyes-CtGvGArJ.svg",
+    "src": "src/assets/svgs/fluent-emoji/beaming-face-with-smiling-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/clown-face.svg": {
+    "file": "assets/clown-face-C249Sk6X.svg",
+    "src": "src/assets/svgs/fluent-emoji/clown-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/cold-face.svg": {
+    "file": "assets/cold-face-BpOW5lY_.svg",
+    "src": "src/assets/svgs/fluent-emoji/cold-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/confounded-face.svg": {
+    "file": "assets/confounded-face-B7JU_AF8.svg",
+    "src": "src/assets/svgs/fluent-emoji/confounded-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/confused-face.svg": {
+    "file": "assets/confused-face-BN4BJE7-.svg",
+    "src": "src/assets/svgs/fluent-emoji/confused-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/cowboy-hat-face.svg": {
+    "file": "assets/cowboy-hat-face-DZRyFC2J.svg",
+    "src": "src/assets/svgs/fluent-emoji/cowboy-hat-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/crying-face.svg": {
+    "file": "assets/crying-face-BEBVqVZ5.svg",
+    "src": "src/assets/svgs/fluent-emoji/crying-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/disappointed-face.svg": {
+    "file": "assets/disappointed-face-BBGxsWat.svg",
+    "src": "src/assets/svgs/fluent-emoji/disappointed-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/disguised-face.svg": {
+    "file": "assets/disguised-face-BZETBWSE.svg",
+    "src": "src/assets/svgs/fluent-emoji/disguised-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/dotted-line-face.svg": {
+    "file": "assets/dotted-line-face-COjWQA1a.svg",
+    "src": "src/assets/svgs/fluent-emoji/dotted-line-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/downcast-face-with-sweat.svg": {
+    "file": "assets/downcast-face-with-sweat-sVN-4HDa.svg",
+    "src": "src/assets/svgs/fluent-emoji/downcast-face-with-sweat.svg"
+  },
+  "src/assets/svgs/fluent-emoji/drooling-face.svg": {
+    "file": "assets/drooling-face-CqlK8V2d.svg",
+    "src": "src/assets/svgs/fluent-emoji/drooling-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/expressionless-face.svg": {
+    "file": "assets/expressionless-face-Ci2MB1Fo.svg",
+    "src": "src/assets/svgs/fluent-emoji/expressionless-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-blowing-a-kiss.svg": {
+    "file": "assets/face-blowing-a-kiss-BGHaLfEW.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-blowing-a-kiss.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-exhaling.svg": {
+    "file": "assets/face-exhaling-ABPq7Gxh.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-exhaling.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-holding-back-tears.svg": {
+    "file": "assets/face-holding-back-tears-Cm9xil6L.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-holding-back-tears.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-in-clouds.svg": {
+    "file": "assets/face-in-clouds-BvEidw2r.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-in-clouds.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-savoring-food.svg": {
+    "file": "assets/face-savoring-food-BrWoI3hh.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-savoring-food.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-screaming-in-fear.svg": {
+    "file": "assets/face-screaming-in-fear-C4LlE4hy.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-screaming-in-fear.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-vomiting.svg": {
+    "file": "assets/face-vomiting-CGcxVV9v.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-vomiting.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-diagonal-mouth.svg": {
+    "file": "assets/face-with-diagonal-mouth-Bdiosu0k.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-diagonal-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-hand-over-mouth.svg": {
+    "file": "assets/face-with-hand-over-mouth-BQMOHP0D.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-hand-over-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-head-bandage.svg": {
+    "file": "assets/face-with-head-bandage-NG76PRIL.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-head-bandage.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-medical-mask.svg": {
+    "file": "assets/face-with-medical-mask-BPyfJU2v.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-medical-mask.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-monocle.svg": {
+    "file": "assets/face-with-monocle-B73IQAYH.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-monocle.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-open-eyes-and-hand-over-mouth.svg": {
+    "file": "assets/face-with-open-eyes-and-hand-over-mouth-C9mOhNO3.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-open-eyes-and-hand-over-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-open-mouth.svg": {
+    "file": "assets/face-with-open-mouth-BAd-2QT2.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-open-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-peeking-eye.svg": {
+    "file": "assets/face-with-peeking-eye-Cp5Bw3Vs.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-peeking-eye.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-raised-eyebrow.svg": {
+    "file": "assets/face-with-raised-eyebrow-DLb_2Zrg.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-raised-eyebrow.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-rolling-eyes.svg": {
+    "file": "assets/face-with-rolling-eyes-k28Pz7rW.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-rolling-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-spiral-eyes.svg": {
+    "file": "assets/face-with-spiral-eyes--NmRssCq.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-spiral-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-steam-from-nose.svg": {
+    "file": "assets/face-with-steam-from-nose-kDoZVONV.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-steam-from-nose.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-symbols-on-mouth.svg": {
+    "file": "assets/face-with-symbols-on-mouth-BpfQHw08.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-symbols-on-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-tears-of-joy.svg": {
+    "file": "assets/face-with-tears-of-joy-C_n7wF5H.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-tears-of-joy.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-thermometer.svg": {
+    "file": "assets/face-with-thermometer-BGtFCdR3.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-thermometer.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-with-tongue.svg": {
+    "file": "assets/face-with-tongue-DkI7eVN_.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-with-tongue.svg"
+  },
+  "src/assets/svgs/fluent-emoji/face-without-mouth.svg": {
+    "file": "assets/face-without-mouth-BF3hmwKU.svg",
+    "src": "src/assets/svgs/fluent-emoji/face-without-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/fearful-face.svg": {
+    "file": "assets/fearful-face-BCnXIEWp.svg",
+    "src": "src/assets/svgs/fluent-emoji/fearful-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/flushed-face.svg": {
+    "file": "assets/flushed-face-QJN5f8ef.svg",
+    "src": "src/assets/svgs/fluent-emoji/flushed-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/frowning-face-with-open-mouth.svg": {
+    "file": "assets/frowning-face-with-open-mouth-B2uRPqiZ.svg",
+    "src": "src/assets/svgs/fluent-emoji/frowning-face-with-open-mouth.svg"
+  },
+  "src/assets/svgs/fluent-emoji/frowning-face.svg": {
+    "file": "assets/frowning-face-BqxnBdvV.svg",
+    "src": "src/assets/svgs/fluent-emoji/frowning-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grimacing-face.svg": {
+    "file": "assets/grimacing-face-Cp6IE8n5.svg",
+    "src": "src/assets/svgs/fluent-emoji/grimacing-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grinning-face-with-big-eyes.svg": {
+    "file": "assets/grinning-face-with-big-eyes-mtbLTpUE.svg",
+    "src": "src/assets/svgs/fluent-emoji/grinning-face-with-big-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grinning-face-with-smiling-eyes.svg": {
+    "file": "assets/grinning-face-with-smiling-eyes-DXt6BTaa.svg",
+    "src": "src/assets/svgs/fluent-emoji/grinning-face-with-smiling-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grinning-face-with-sweat.svg": {
+    "file": "assets/grinning-face-with-sweat-BlFUhXyY.svg",
+    "src": "src/assets/svgs/fluent-emoji/grinning-face-with-sweat.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grinning-face.svg": {
+    "file": "assets/grinning-face-D0i96wUK.svg",
+    "src": "src/assets/svgs/fluent-emoji/grinning-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/grinning-squinting-face.svg": {
+    "file": "assets/grinning-squinting-face-DqeR-tiA.svg",
+    "src": "src/assets/svgs/fluent-emoji/grinning-squinting-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/hot-face.svg": {
+    "file": "assets/hot-face-DHrVbS85.svg",
+    "src": "src/assets/svgs/fluent-emoji/hot-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/hugging-face.svg": {
+    "file": "assets/hugging-face-DN4FWMAL.svg",
+    "src": "src/assets/svgs/fluent-emoji/hugging-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/hushed-face.svg": {
+    "file": "assets/hushed-face-DPEoTNDM.svg",
+    "src": "src/assets/svgs/fluent-emoji/hushed-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/kissing-face-with-closed-eyes.svg": {
+    "file": "assets/kissing-face-with-closed-eyes-Y7JCoVKg.svg",
+    "src": "src/assets/svgs/fluent-emoji/kissing-face-with-closed-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/kissing-face-with-smiling-eyes.svg": {
+    "file": "assets/kissing-face-with-smiling-eyes-lwuloJfk.svg",
+    "src": "src/assets/svgs/fluent-emoji/kissing-face-with-smiling-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/kissing-face.svg": {
+    "file": "assets/kissing-face-Cw_1pdNj.svg",
+    "src": "src/assets/svgs/fluent-emoji/kissing-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/knocked-out-face.svg": {
+    "file": "assets/knocked-out-face-BhvdScdE.svg",
+    "src": "src/assets/svgs/fluent-emoji/knocked-out-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/loudly-crying-face.svg": {
+    "file": "assets/loudly-crying-face-Q3cQhND7.svg",
+    "src": "src/assets/svgs/fluent-emoji/loudly-crying-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/lying-face.svg": {
+    "file": "assets/lying-face-CvWzf7PT.svg",
+    "src": "src/assets/svgs/fluent-emoji/lying-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/melting-face.svg": {
+    "file": "assets/melting-face-DF9xIa3Z.svg",
+    "src": "src/assets/svgs/fluent-emoji/melting-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/money-mouth-face.svg": {
+    "file": "assets/money-mouth-face-a0vZWMFL.svg",
+    "src": "src/assets/svgs/fluent-emoji/money-mouth-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/nauseated-face.svg": {
+    "file": "assets/nauseated-face-BtZJBpNg.svg",
+    "src": "src/assets/svgs/fluent-emoji/nauseated-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/nerd-face.svg": {
+    "file": "assets/nerd-face-BxrmfiF2.svg",
+    "src": "src/assets/svgs/fluent-emoji/nerd-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/neutral-face.svg": {
+    "file": "assets/neutral-face-BdzQJ-cN.svg",
+    "src": "src/assets/svgs/fluent-emoji/neutral-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/partying-face.svg": {
+    "file": "assets/partying-face-lXQAMA1O.svg",
+    "src": "src/assets/svgs/fluent-emoji/partying-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/pensive-face.svg": {
+    "file": "assets/pensive-face-RqkM2dJQ.svg",
+    "src": "src/assets/svgs/fluent-emoji/pensive-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/persevering-face.svg": {
+    "file": "assets/persevering-face-DMQ5-gn3.svg",
+    "src": "src/assets/svgs/fluent-emoji/persevering-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/pleading-face.svg": {
+    "file": "assets/pleading-face-Di9fArG6.svg",
+    "src": "src/assets/svgs/fluent-emoji/pleading-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/pouting-face.svg": {
+    "file": "assets/pouting-face-CqOml1hI.svg",
+    "src": "src/assets/svgs/fluent-emoji/pouting-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/relieved-face.svg": {
+    "file": "assets/relieved-face-3QVJJFcR.svg",
+    "src": "src/assets/svgs/fluent-emoji/relieved-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/rolling-on-the-floor-laughing.svg": {
+    "file": "assets/rolling-on-the-floor-laughing-CfRbt5vv.svg",
+    "src": "src/assets/svgs/fluent-emoji/rolling-on-the-floor-laughing.svg"
+  },
+  "src/assets/svgs/fluent-emoji/sad-but-relieved-face.svg": {
+    "file": "assets/sad-but-relieved-face-CxpdNnVB.svg",
+    "src": "src/assets/svgs/fluent-emoji/sad-but-relieved-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/saluting-face.svg": {
+    "file": "assets/saluting-face-CALtJUhh.svg",
+    "src": "src/assets/svgs/fluent-emoji/saluting-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/shaking-face.svg": {
+    "file": "assets/shaking-face-BR3JRr0G.svg",
+    "src": "src/assets/svgs/fluent-emoji/shaking-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/shushing-face.svg": {
+    "file": "assets/shushing-face-DvdjVHui.svg",
+    "src": "src/assets/svgs/fluent-emoji/shushing-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/sleeping-face.svg": {
+    "file": "assets/sleeping-face-BiWNVC_P.svg",
+    "src": "src/assets/svgs/fluent-emoji/sleeping-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/sleepy-face.svg": {
+    "file": "assets/sleepy-face-D6i3wHV8.svg",
+    "src": "src/assets/svgs/fluent-emoji/sleepy-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/slightly-frowning-face.svg": {
+    "file": "assets/slightly-frowning-face-CQCv-ljf.svg",
+    "src": "src/assets/svgs/fluent-emoji/slightly-frowning-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/slightly-smiling-face.svg": {
+    "file": "assets/slightly-smiling-face-CCZqKajP.svg",
+    "src": "src/assets/svgs/fluent-emoji/slightly-smiling-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-halo.svg": {
+    "file": "assets/smiling-face-with-halo-BS0gq3dh.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-halo.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-heart-eyes.svg": {
+    "file": "assets/smiling-face-with-heart-eyes-1hR40yoE.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-heart-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-hearts.svg": {
+    "file": "assets/smiling-face-with-hearts-Da-NyB_m.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-hearts.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-horns.svg": {
+    "file": "assets/smiling-face-with-horns-8Zpz9gxn.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-horns.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-smiling-eyes.svg": {
+    "file": "assets/smiling-face-with-smiling-eyes-B3SwIxrM.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-smiling-eyes.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-sunglasses.svg": {
+    "file": "assets/smiling-face-with-sunglasses-DmoHcxlp.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-sunglasses.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face-with-tear.svg": {
+    "file": "assets/smiling-face-with-tear-BbwAn_VW.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face-with-tear.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smiling-face.svg": {
+    "file": "assets/smiling-face-CHaMCAxV.svg",
+    "src": "src/assets/svgs/fluent-emoji/smiling-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/smirking-face.svg": {
+    "file": "assets/smirking-face-CZnoxa1f.svg",
+    "src": "src/assets/svgs/fluent-emoji/smirking-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/sneezing-face.svg": {
+    "file": "assets/sneezing-face-C7Rfm0ce.svg",
+    "src": "src/assets/svgs/fluent-emoji/sneezing-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/squinting-face-with-tongue.svg": {
+    "file": "assets/squinting-face-with-tongue-XNReph9r.svg",
+    "src": "src/assets/svgs/fluent-emoji/squinting-face-with-tongue.svg"
+  },
+  "src/assets/svgs/fluent-emoji/star-struck.svg": {
+    "file": "assets/star-struck-BI-WGEKD.svg",
+    "src": "src/assets/svgs/fluent-emoji/star-struck.svg"
+  },
+  "src/assets/svgs/fluent-emoji/thinking-face.svg": {
+    "file": "assets/thinking-face-D-L_hubM.svg",
+    "src": "src/assets/svgs/fluent-emoji/thinking-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/tired-face.svg": {
+    "file": "assets/tired-face-D2grY_Se.svg",
+    "src": "src/assets/svgs/fluent-emoji/tired-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/unamused-face.svg": {
+    "file": "assets/unamused-face-B5j1h3yN.svg",
+    "src": "src/assets/svgs/fluent-emoji/unamused-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/upside-down-face.svg": {
+    "file": "assets/upside-down-face-CZHOkrDs.svg",
+    "src": "src/assets/svgs/fluent-emoji/upside-down-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/weary-face.svg": {
+    "file": "assets/weary-face-DthxxK_Z.svg",
+    "src": "src/assets/svgs/fluent-emoji/weary-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/winking-face-with-tongue.svg": {
+    "file": "assets/winking-face-with-tongue-DoUqDrEZ.svg",
+    "src": "src/assets/svgs/fluent-emoji/winking-face-with-tongue.svg"
+  },
+  "src/assets/svgs/fluent-emoji/winking-face.svg": {
+    "file": "assets/winking-face-j01aqQt_.svg",
+    "src": "src/assets/svgs/fluent-emoji/winking-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/woozy-face.svg": {
+    "file": "assets/woozy-face-CMAAhyFP.svg",
+    "src": "src/assets/svgs/fluent-emoji/woozy-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/worried-face.svg": {
+    "file": "assets/worried-face-EAbR7jQb.svg",
+    "src": "src/assets/svgs/fluent-emoji/worried-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/yawning-face.svg": {
+    "file": "assets/yawning-face-D-i4hyXp.svg",
+    "src": "src/assets/svgs/fluent-emoji/yawning-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/zany-face.svg": {
+    "file": "assets/zany-face-INkGXexH.svg",
+    "src": "src/assets/svgs/fluent-emoji/zany-face.svg"
+  },
+  "src/assets/svgs/fluent-emoji/zipper-mouth-face.svg": {
+    "file": "assets/zipper-mouth-face-0UkkkbPF.svg",
+    "src": "src/assets/svgs/fluent-emoji/zipper-mouth-face.svg"
+  },
+  "src/assets/svgs/link.svg": {
+    "file": "assets/link-6-3KL6HC.svg",
+    "src": "src/assets/svgs/link.svg"
+  },
+  "src/assets/svgs/logo.svg": {
+    "file": "assets/logo-H1BuKNY2.svg",
+    "src": "src/assets/svgs/logo.svg"
+  },
+  "src/assets/svgs/miao.svg": {
+    "file": "assets/miao-CaIr4D2z.svg",
+    "src": "src/assets/svgs/miao.svg"
+  },
+  "src/assets/svgs/mode_desktop.svg": {
+    "file": "assets/mode_desktop-B3IBbsT1.svg",
+    "src": "src/assets/svgs/mode_desktop.svg"
+  },
+  "src/assets/svgs/mode_pure.svg": {
+    "file": "assets/mode_pure-B-D8aqpa.svg",
+    "src": "src/assets/svgs/mode_pure.svg"
+  },
+  "src/assets/svgs/navigation.svg": {
+    "file": "assets/navigation-f8YDX9cP.svg",
+    "src": "src/assets/svgs/navigation.svg"
+  },
+  "src/assets/svgs/setting.svg": {
+    "file": "assets/setting-C3lG2qmJ.svg",
+    "src": "src/assets/svgs/setting.svg"
+  },
+  "src/assets/svgs/theme_dark.svg": {
+    "file": "assets/theme_dark-MC-ANf0e.svg",
+    "src": "src/assets/svgs/theme_dark.svg"
+  },
+  "src/assets/svgs/theme_light.svg": {
+    "file": "assets/theme_light-DLyEgBzi.svg",
+    "src": "src/assets/svgs/theme_light.svg"
+  },
+  "src/assets/svgs/widget.svg": {
+    "file": "assets/widget-1358ypUw.svg",
+    "src": "src/assets/svgs/widget.svg"
+  },
+  "src/components/Announcement/src/MiAnnouncementCenter.vue": {
+    "file": "assets/MiAnnouncementCenter-DDmocPQx.js",
+    "name": "MiAnnouncementCenter",
+    "src": "src/components/Announcement/src/MiAnnouncementCenter.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-B6vyzLch.js"
+    ],
+    "css": [
+      "assets/MiAnnouncementCenter-BMm5u5vQ.css"
+    ]
+  },
+  "src/components/CommandPalette/src/MiCommandPalette.vue": {
+    "file": "assets/MiCommandPalette-DHai2iGn.js",
+    "name": "MiCommandPalette",
+    "src": "src/components/CommandPalette/src/MiCommandPalette.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_useBookmarkSyncPreview-CPoSINmX.js"
+    ],
+    "css": [
+      "assets/MiCommandPalette-DRsMsgp9.css"
+    ]
+  },
+  "src/components/Contextmenu/src/MiContextMenu.vue": {
+    "file": "assets/MiContextMenu-CcipHzSn.js",
+    "name": "MiContextMenu",
+    "src": "src/components/Contextmenu/src/MiContextMenu.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/MiContextMenu-DCHv0Fwm.css"
+    ]
+  },
+  "src/components/Operate/src/MiOperateModal.vue": {
+    "file": "assets/MiOperateModal-BC2SqwQW.js",
+    "name": "MiOperateModal",
+    "src": "src/components/Operate/src/MiOperateModal.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "dynamicImports": [
+      "src/components/Operate/src/components/WebsiteGuideSetting.vue",
+      "src/components/Operate/src/components/WidgetSetting.vue",
+      "src/components/Operate/src/components/CustomAddSetting.vue"
+    ],
+    "css": [
+      "assets/MiOperateModal-B2IVSWSs.css"
+    ]
+  },
+  "src/components/Operate/src/components/CustomAddSetting.vue": {
+    "file": "assets/CustomAddSetting-1iC-ZODz.js",
+    "name": "CustomAddSetting",
+    "src": "src/components/Operate/src/components/CustomAddSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-FThoPLHW.js",
+      "_plugin-B30rXoNt.js"
+    ],
+    "css": [
+      "assets/CustomAddSetting-Ci6XAy4Q.css"
+    ]
+  },
+  "src/components/Operate/src/components/WebsiteGuideSetting.vue": {
+    "file": "assets/WebsiteGuideSetting-cjXlUCPQ.js",
+    "name": "WebsiteGuideSetting",
+    "src": "src/components/Operate/src/components/WebsiteGuideSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_plugin-B30rXoNt.js"
+    ],
+    "css": [
+      "assets/WebsiteGuideSetting-B1ySsdn2.css"
+    ]
+  },
+  "src/components/Operate/src/components/WidgetSetting.vue": {
+    "file": "assets/WidgetSetting-DXRePzCH.js",
+    "name": "WidgetSetting",
+    "src": "src/components/Operate/src/components/WidgetSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_plugin-B30rXoNt.js"
+    ],
+    "css": [
+      "assets/WidgetSetting-DEak4m-q.css"
+    ]
+  },
+  "src/components/ReleaseNotes/src/MiReleaseNotesModal.vue": {
+    "file": "assets/MiReleaseNotesModal-BqzwoG1Z.js",
+    "name": "MiReleaseNotesModal",
+    "src": "src/components/ReleaseNotes/src/MiReleaseNotesModal.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/MiReleaseNotesModal-DXi1wp0E.css"
+    ]
+  },
+  "src/components/Setting/src/MiSettingModal.vue": {
+    "file": "assets/MiSettingModal-BBFDY6hS.js",
+    "name": "MiSettingModal",
+    "src": "src/components/Setting/src/MiSettingModal.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "dynamicImports": [
+      "src/components/Setting/src/components/BasicSetting.vue",
+      "src/components/Setting/src/components/SceneSetting.vue",
+      "src/components/Setting/src/components/PrivacySetting.vue",
+      "src/components/Setting/src/components/SearchSetting.vue",
+      "src/components/Setting/src/components/WallpaperSetting.vue",
+      "src/components/Setting/src/components/TimeSetting.vue",
+      "src/components/Setting/src/components/DailyPoetrySetting.vue",
+      "src/components/Setting/src/components/BackupSetting.vue",
+      "src/components/Setting/src/components/AboutSetting.vue"
+    ],
+    "css": [
+      "assets/MiSettingModal-CzhaMKGw.css"
+    ]
+  },
+  "src/components/Setting/src/components/AboutSetting.vue": {
+    "file": "assets/AboutSetting-BnAWCxIW.js",
+    "name": "AboutSetting",
+    "src": "src/components/Setting/src/components/AboutSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/AboutSetting-BUYo5kJP.css"
+    ]
+  },
+  "src/components/Setting/src/components/BackupSetting.vue": {
+    "file": "assets/BackupSetting-CFXgSHwN.js",
+    "name": "BackupSetting",
+    "src": "src/components/Setting/src/components/BackupSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_useBookmarkSyncPreview-CPoSINmX.js",
+      "_index-B6vyzLch.js",
+      "_index-FThoPLHW.js"
+    ]
+  },
+  "src/components/Setting/src/components/BasicSetting.vue": {
+    "file": "assets/BasicSetting-CE4PTl5v.js",
+    "name": "BasicSetting",
+    "src": "src/components/Setting/src/components/BasicSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_dict-CtmwdbaR.js",
+      "_index-B6vyzLch.js",
+      "_index-CwXWvHv7.js"
+    ],
+    "dynamicImports": [
+      "src/locales/en.ts",
+      "src/locales/zh-CN.ts"
+    ]
+  },
+  "src/components/Setting/src/components/DailyPoetrySetting.vue": {
+    "file": "assets/DailyPoetrySetting-BB5WwvKu.js",
+    "name": "DailyPoetrySetting",
+    "src": "src/components/Setting/src/components/DailyPoetrySetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-CwXWvHv7.js"
+    ],
+    "css": [
+      "assets/DailyPoetrySetting-wY_GAK1j.css"
+    ]
+  },
+  "src/components/Setting/src/components/PrivacySetting.vue": {
+    "file": "assets/PrivacySetting-CzTB9Zs5.js",
+    "name": "PrivacySetting",
+    "src": "src/components/Setting/src/components/PrivacySetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-CwXWvHv7.js"
+    ],
+    "css": [
+      "assets/PrivacySetting-BVaJcx3D.css"
+    ]
+  },
+  "src/components/Setting/src/components/SceneSetting.vue": {
+    "file": "assets/SceneSetting-eafzqfUd.js",
+    "name": "SceneSetting",
+    "src": "src/components/Setting/src/components/SceneSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-CwXWvHv7.js"
+    ],
+    "css": [
+      "assets/SceneSetting-DP-U1Lbm.css"
+    ]
+  },
+  "src/components/Setting/src/components/SearchSetting.vue": {
+    "file": "assets/SearchSetting-BlTp01uN.js",
+    "name": "SearchSetting",
+    "src": "src/components/Setting/src/components/SearchSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_dict-CtmwdbaR.js",
+      "_index-B6vyzLch.js",
+      "_index-CwXWvHv7.js"
+    ],
+    "css": [
+      "assets/SearchSetting-CXy2z9dC.css"
+    ]
+  },
+  "src/components/Setting/src/components/TimeSetting.vue": {
+    "file": "assets/TimeSetting-DM-j1BKf.js",
+    "name": "TimeSetting",
+    "src": "src/components/Setting/src/components/TimeSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-CwXWvHv7.js"
+    ],
+    "css": [
+      "assets/TimeSetting-DOvCmfIw.css"
+    ]
+  },
+  "src/components/Setting/src/components/WallpaperSetting.vue": {
+    "file": "assets/WallpaperSetting-QR_8TATC.js",
+    "name": "WallpaperSetting",
+    "src": "src/components/Setting/src/components/WallpaperSetting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-CwXWvHv7.js",
+      "_index-B6vyzLch.js",
+      "_index-FThoPLHW.js"
+    ],
+    "css": [
+      "assets/WallpaperSetting-yfRvpiXX.css"
+    ]
+  },
+  "src/locales/en.ts": {
+    "file": "assets/en-D40JvjqF.js",
+    "name": "en",
+    "src": "src/locales/en.ts",
+    "isDynamicEntry": true
+  },
+  "src/locales/zh-CN.ts": {
+    "file": "assets/zh-CN-CeSaHNxZ.js",
+    "name": "zh-CN",
+    "src": "src/locales/zh-CN.ts",
+    "isDynamicEntry": true
+  }
+}

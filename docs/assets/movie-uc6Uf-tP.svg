@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="2 2 20 20" fill="none">
+<path   fill="currentColor"  d="M2.25 17L2.25 7C2.25 5.48122 3.48122 4.25 5 4.25L19 4.25C20.5188 4.25 21.75 5.48122 21.75 7L21.75 17C21.75 18.5188 20.5188 19.75 19 19.75L5 19.75C3.48122 19.75 2.25 18.5188 2.25 17ZM3.75 17C3.75 17.6904 4.30964 18.25 5 18.25L19 18.25C19.6904 18.25 20.25 17.6904 20.25 17L20.25 7C20.25 6.30964 19.6904 5.75 19 5.75L5 5.75C4.30964 5.75 3.75 6.30964 3.75 7L3.75 17Z">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M17.3994 5L17.3994 18.9991">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M6.59985 5L6.59985 18.9991">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M18.2993 9.37476L20.9992 9.37476">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M18.2993 14.6244L20.9992 14.6244">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M3 9.37476L5.69987 9.37476">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M3 8.49976L3 10.2496">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M3 14.6244L5.69987 14.6244">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M3 13.7495L3 15.4994">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M20.999 13.7495L20.999 15.4994">
+</path>
+<path    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"  d="M20.999 8.49976L20.999 10.2496">
+</path>
+<path   fill="currentColor"  d="M11.6889 8.76677L14.4938 10.7302C15.3753 11.3472 15.3753 12.6528 14.4938 13.2699L11.6889 15.2332C10.6616 15.9524 9.25 15.2174 9.25 13.9634L9.25 10.0366C9.25 8.78259 10.6616 8.04763 11.6889 8.76677ZM10.8288 9.99562C10.7956 9.9724 10.75 9.99613 10.75 10.0366L10.75 13.9634C10.75 14.0039 10.7956 14.0276 10.8288 14.0044L13.6336 12.041C13.662 12.0211 13.662 11.9789 13.6336 11.959L10.8288 9.99562Z">
+</path>
+</svg>
